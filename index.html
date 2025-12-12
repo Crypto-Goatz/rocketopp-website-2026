@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RocketOpp | AI-Powered Business Acceleration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              lava: {
+                100: '#fed7aa',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                900: '#7c2d12',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for sleek look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #f97316; 
+      }
+      .lava-text {
+        background: linear-gradient(to right, #f97316, #ef4444, #eab308);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .lava-bg {
+        background: linear-gradient(135deg, #f97316, #dc2626, #ca8a04);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.560.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.3/",
+    "react": "https://aistudiocdn.com/react@^19.2.3",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.33.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-950 text-white overflow-x-hidden antialiased">
+    <div id="root"></div>
+  </body>
+</html>
