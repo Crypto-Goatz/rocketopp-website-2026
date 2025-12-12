@@ -115,10 +115,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-slate-100 selection:bg-orange-500 selection:text-white font-sans relative overflow-x-hidden">
+    <div className="min-h-screen bg-black text-zinc-100 selection:bg-orange-500 selection:text-white font-sans relative overflow-x-hidden">
       {/* Global Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-slate-900 to-transparent opacity-50"></div>
+        <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-zinc-900 to-transparent opacity-50"></div>
         <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-orange-900/10 rounded-full blur-[120px]"></div>
       </div>
 
@@ -141,16 +141,16 @@ const App: React.FC = () => {
         <OnboardingModal onComplete={handleOnboardingComplete} />
       )}
       
-      <footer className="border-t border-slate-900 bg-black py-12 mt-12 relative overflow-hidden">
+      <footer className="border-t border-zinc-900 bg-black py-12 mt-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-orange-900/10 to-transparent pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-6 text-center text-slate-500 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 text-center text-zinc-500 relative z-10">
           <div className="flex justify-center items-center gap-2 mb-6">
             <img 
               src="https://cdn-icons-png.flaticon.com/512/9305/9305739.png" 
               alt="RocketOpp Logo" 
-              className="w-8 h-8 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              className="w-10 h-10 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
             />
-            <p className="font-display font-bold text-slate-300">RocketOpp.com</p>
+            <p className="font-display font-bold text-zinc-300">RocketOpp.com</p>
           </div>
           <div className="flex justify-center gap-6 text-sm mb-8">
             <button onClick={() => setCurrentView(PageView.SERVICES)} className="hover:text-orange-500 transition-colors">Services</button>

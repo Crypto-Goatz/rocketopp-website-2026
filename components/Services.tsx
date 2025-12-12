@@ -12,12 +12,12 @@ const ServiceCard: React.FC<{
   icon: React.ElementType;
   className?: string;
 }> = ({ title, desc, icon: Icon, className }) => (
-  <div className={`p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-orange-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] hover:-translate-y-2 group ${className}`}>
-    <div className="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-red-600 transition-all duration-500">
-      <Icon className="w-7 h-7 text-slate-300 group-hover:text-white" />
+  <div className={`p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-orange-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] hover:-translate-y-2 group ${className}`}>
+    <div className="w-14 h-14 rounded-2xl bg-zinc-800 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-orange-500 group-hover:to-red-600 transition-all duration-500">
+      <Icon className="w-7 h-7 text-zinc-300 group-hover:text-white" />
     </div>
     <h3 className="text-xl font-display font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">{title}</h3>
-    <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">{desc}</p>
+    <p className="text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors">{desc}</p>
   </div>
 );
 
@@ -33,7 +33,7 @@ const Services: React.FC<Props> = ({ user }) => {
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
           Future-Proof <span className="lava-text">Capabilities</span>
         </h2>
-        <p className="text-lg text-slate-400">
+        <p className="text-lg text-zinc-400">
           {isSpecific 
             ? `We engineer intelligent digital ecosystems specifically for the ${user.industry} sector. Stop competing and start dominating.` 
             : "We don't just build websites; we build self-optimizing business engines driven by artificial intelligence."}

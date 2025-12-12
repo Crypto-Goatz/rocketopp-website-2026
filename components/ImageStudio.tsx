@@ -60,38 +60,38 @@ const ImageStudio: React.FC<{ user: UserContext }> = ({ user }) => {
         <div className="lg:col-span-1 space-y-6">
           <div>
             <h2 className="text-3xl font-display font-bold mb-2">Visual <span className="lava-text">Studio</span></h2>
-            <p className="text-slate-400 text-sm">Create high-end assets or edit existing photos with Nano Banana speed.</p>
+            <p className="text-zinc-400 text-sm">Create high-end assets or edit existing photos with Nano Banana speed.</p>
           </div>
 
-          <div className="flex gap-2 bg-slate-900 p-1 rounded-lg">
+          <div className="flex gap-2 bg-zinc-900 p-1 rounded-lg">
             <button 
               onClick={() => { setMode('generate'); setGeneratedImage(null); }}
-              className={`flex-1 py-2 text-sm font-bold rounded-md transition-colors ${mode === 'generate' ? 'bg-slate-700 text-white' : 'text-slate-500 hover:text-white'}`}
+              className={`flex-1 py-2 text-sm font-bold rounded-md transition-colors ${mode === 'generate' ? 'bg-zinc-700 text-white' : 'text-zinc-500 hover:text-white'}`}
             >
               Generate (Pro)
             </button>
             <button 
               onClick={() => { setMode('edit'); setGeneratedImage(null); }}
-              className={`flex-1 py-2 text-sm font-bold rounded-md transition-colors ${mode === 'edit' ? 'bg-slate-700 text-white' : 'text-slate-500 hover:text-white'}`}
+              className={`flex-1 py-2 text-sm font-bold rounded-md transition-colors ${mode === 'edit' ? 'bg-zinc-700 text-white' : 'text-zinc-500 hover:text-white'}`}
             >
               Edit (Nano)
             </button>
           </div>
 
           {mode === 'edit' && (
-             <div className="border-2 border-dashed border-slate-700 rounded-xl p-6 text-center hover:border-orange-500 transition-colors cursor-pointer relative">
+             <div className="border-2 border-dashed border-zinc-700 rounded-xl p-6 text-center hover:border-orange-500 transition-colors cursor-pointer relative">
                <input type="file" onChange={handleFileChange} className="absolute inset-0 opacity-0 cursor-pointer" accept="image/*" />
-               <Upload className="w-8 h-8 text-slate-500 mx-auto mb-2" />
-               <p className="text-sm text-slate-400">{selectedFile ? selectedFile.name : "Upload image to edit"}</p>
+               <Upload className="w-8 h-8 text-zinc-500 mx-auto mb-2" />
+               <p className="text-sm text-zinc-400">{selectedFile ? selectedFile.name : "Upload image to edit"}</p>
              </div>
           )}
 
           <div className="space-y-2">
-            <label className="text-xs uppercase font-bold text-slate-500 tracking-wider">Prompt</label>
+            <label className="text-xs uppercase font-bold text-zinc-500 tracking-wider">Prompt</label>
             <textarea 
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
-              className="w-full h-32 bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:border-orange-500 focus:outline-none resize-none text-sm"
+              className="w-full h-32 bg-zinc-900 border border-zinc-700 rounded-xl p-3 text-white focus:border-orange-500 focus:outline-none resize-none text-sm"
               placeholder={mode === 'generate' ? "A futuristic office with orange neon lighting..." : "Add a lens flare effect..."}
             />
           </div>
@@ -107,18 +107,18 @@ const ImageStudio: React.FC<{ user: UserContext }> = ({ user }) => {
         </div>
 
         {/* Canvas */}
-        <div className="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl flex items-center justify-center min-h-[500px] relative overflow-hidden group">
+        <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl flex items-center justify-center min-h-[500px] relative overflow-hidden group">
           {generatedImage ? (
             <>
               <img src={generatedImage} alt="Generated" className="w-full h-full object-contain" />
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <a href={generatedImage} download="rocketopp-asset.png" className="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-orange-100">
+                <a href={generatedImage} download="rocketopp-asset.png" className="bg-white text-zinc-900 px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-orange-100">
                   <Download className="w-4 h-4" /> Download
                 </a>
               </div>
             </>
           ) : (
-            <div className="text-center text-slate-700">
+            <div className="text-center text-zinc-700">
               <ImageIcon className="w-16 h-16 mx-auto mb-4 opacity-20" />
               <p>AI Canvas Empty</p>
             </div>

@@ -26,13 +26,13 @@ const Navigation: React.FC<Props> = ({ currentView, setView }) => {
   const navItemClass = (isActive: boolean) => `
     px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 border border-transparent
     ${isActive 
-      ? 'bg-slate-800 text-white shadow-inner shadow-black/50 border-slate-700' 
-      : 'text-slate-400 hover:text-white hover:bg-slate-900'
+      ? 'bg-zinc-800 text-white shadow-inner shadow-black/50 border-zinc-700' 
+      : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
     }
   `;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-slate-900 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-900 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between relative">
         <div 
           className="flex items-center gap-3 cursor-pointer group"
@@ -75,7 +75,7 @@ const Navigation: React.FC<Props> = ({ currentView, setView }) => {
             {/* Mega Menu */}
             {isServicesOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[600px]">
-                <div className="bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl p-6 grid grid-cols-3 gap-4 relative overflow-hidden">
+                <div className="bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl p-6 grid grid-cols-3 gap-4 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-b from-orange-900/10 to-transparent pointer-events-none"></div>
                   
                   {[
@@ -86,14 +86,14 @@ const Navigation: React.FC<Props> = ({ currentView, setView }) => {
                     <div 
                       key={item.id}
                       onClick={() => { setView(item.id); setIsServicesOpen(false); }}
-                      className="group cursor-pointer p-4 rounded-xl hover:bg-slate-900 transition-all border border-transparent hover:border-slate-800"
+                      className="group cursor-pointer p-4 rounded-xl hover:bg-zinc-900 transition-all border border-transparent hover:border-zinc-800"
                     >
-                      <div className="w-10 h-10 bg-slate-900 group-hover:bg-orange-600 rounded-lg flex items-center justify-center mb-3 transition-colors">
+                      <div className="w-10 h-10 bg-zinc-900 group-hover:bg-orange-600 rounded-lg flex items-center justify-center mb-3 transition-colors">
                         <item.icon className="w-5 h-5 text-white" />
                       </div>
                       <h4 className="font-bold text-white mb-1 group-hover:text-orange-500 transition-colors">{item.label}</h4>
-                      <p className="text-xs text-slate-500 mb-3 leading-tight">{item.desc}</p>
-                      <span className="text-xs font-bold text-slate-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      <p className="text-xs text-zinc-500 mb-3 leading-tight">{item.desc}</p>
+                      <span className="text-xs font-bold text-zinc-400 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                         Learn More <ArrowRight className="w-3 h-3" />
                       </span>
                     </div>

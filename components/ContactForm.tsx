@@ -29,7 +29,7 @@ const ContactForm: React.FC<{ user: UserContext }> = ({ user }) => {
           <CheckCircle className="w-12 h-12 text-green-500" />
         </div>
         <h2 className="text-4xl font-display font-bold mb-4">Transmission Received</h2>
-        <p className="text-slate-400 text-lg">
+        <p className="text-zinc-400 text-lg">
           RocketOpp is analyzing your data. An expert agent will contact you shortly to begin your transformation.
         </p>
       </div>
@@ -40,67 +40,67 @@ const ContactForm: React.FC<{ user: UserContext }> = ({ user }) => {
     <div className="max-w-3xl mx-auto py-12">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-display font-bold mb-4">Let's <span className="lava-text">Talk Business</span></h2>
-        <p className="text-slate-400">Fill out the intelligence briefing below.</p>
+        <p className="text-zinc-400">Fill out the intelligence briefing below.</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-slate-900 border border-slate-800 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+      <form onSubmit={handleSubmit} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-orange-600/10 rounded-bl-full pointer-events-none"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="space-y-2">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Full Name</label>
+            <label className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Full Name</label>
             <input 
               required
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({...formData, name: e.target.value})}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Company Name</label>
+            <label className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Company Name</label>
             <input 
               type="text"
               value={formData.company}
               onChange={(e) => setFormData({...formData, company: e.target.value})}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="space-y-2">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Email Address</label>
+            <label className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Email Address</label>
             <input 
               required
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Phone</label>
+            <label className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Phone</label>
             <input 
               required
               type="tel"
               value={formData.phone}
               onChange={(e) => setFormData({...formData, phone: e.target.value})}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
             />
           </div>
         </div>
 
         <div className="mb-8 space-y-2">
-          <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Industry / Vertical</label>
+          <label className="text-sm font-bold text-zinc-500 uppercase tracking-wider">Industry / Vertical</label>
           <input 
             required
             type="text"
             value={formData.industry}
             onChange={(e) => setFormData({...formData, industry: e.target.value})}
             placeholder="e.g. Legal, Medical, Real Estate..."
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
+            className="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 focus:border-orange-500 focus:outline-none transition-colors"
           />
         </div>
 

@@ -40,9 +40,6 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
       setShowEngagement(true);
     } else {
       // If user interacts, we can choose to dismiss it or keep it if they are interacting WITH the component.
-      // For now, let's keep it visible until they make a choice or scroll away if needed.
-      // But to be "alive", if they start moving, we might want to welcome them back.
-      // Let's rely on the user explicitly closing or interacting with the dropdown.
     }
   }, [isIdle]);
 
@@ -68,14 +65,14 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
         
         {/* Engagement Mode Overlay */}
         <div className={`transition-opacity duration-700 ${showEngagement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none absolute inset-0 flex flex-col items-center justify-center'}`}>
-           <div className="bg-slate-950/80 backdrop-blur-xl border border-orange-500/50 p-12 rounded-3xl shadow-[0_0_50px_rgba(249,115,22,0.3)] max-w-2xl mx-auto transform transition-transform">
+           <div className="bg-zinc-950/80 backdrop-blur-xl border border-orange-500/50 p-12 rounded-3xl shadow-[0_0_50px_rgba(249,115,22,0.3)] max-w-2xl mx-auto transform transition-transform">
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                 <Hand className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
                 Hey! Are you still there?
               </h2>
-              <p className="text-xl text-slate-300 mb-8">
+              <p className="text-xl text-zinc-300 mb-8">
                 We noticed you pausing. Let's make this worth your time. Tell us your industry, and watch this entire website rewrite itself for <span className="text-orange-500 font-bold">YOU</span>.
               </p>
               
@@ -85,12 +82,12 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
                     <button
                       key={ind}
                       onClick={() => handleQuickOptimize(ind)}
-                      className="px-4 py-3 bg-slate-900 hover:bg-orange-600 hover:text-white border border-slate-800 rounded-xl transition-all font-medium text-sm"
+                      className="px-4 py-3 bg-zinc-900 hover:bg-orange-600 hover:text-white border border-zinc-800 rounded-xl transition-all font-medium text-sm text-zinc-300"
                     >
                       {ind}
                     </button>
                   ))}
-                  <button onClick={() => setShowEngagement(false)} className="col-span-full mt-4 text-slate-500 hover:text-white text-sm">
+                  <button onClick={() => setShowEngagement(false)} className="col-span-full mt-4 text-zinc-500 hover:text-white text-sm">
                     Just browsing, thanks.
                   </button>
                 </div>
@@ -103,7 +100,7 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
                   >
                     Let's Talk Business
                   </button>
-                  <button onClick={() => setShowEngagement(false)} className="block mx-auto mt-4 text-slate-500 hover:text-white text-sm">
+                  <button onClick={() => setShowEngagement(false)} className="block mx-auto mt-4 text-zinc-500 hover:text-white text-sm">
                     Dismiss
                   </button>
                 </div>
@@ -113,18 +110,18 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
 
         {/* Standard Hero Content */}
         <div className={`transition-all duration-700 ${showEngagement ? 'opacity-0 scale-95 blur-sm' : 'opacity-100 scale-100 blur-0'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700 text-xs font-bold text-orange-400 mb-8 uppercase tracking-widest backdrop-blur-sm shadow-xl">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700 text-xs font-bold text-orange-400 mb-8 uppercase tracking-widest backdrop-blur-sm shadow-xl">
             {isOptimizing ? <Loader2 className="animate-spin w-3 h-3" /> : <Sparkles className="w-3 h-3" />}
             {isOptimizing ? "Calibrating to industry..." : `Optimized for ${user.industry || 'Business'}`}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
-            <span className="bg-gradient-to-br from-white via-slate-200 to-slate-500 text-transparent bg-clip-text drop-shadow-sm">
+            <span className="bg-gradient-to-br from-white via-zinc-200 to-zinc-500 text-transparent bg-clip-text drop-shadow-sm">
               {headline}
             </span>
           </h1>
 
-          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
             {subhead}
           </p>
 
@@ -138,25 +135,25 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
             </button>
             <button 
               onClick={() => setView(PageView.TOOLS)}
-              className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 hover:border-orange-500/50 hover:bg-slate-800 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-zinc-900 border border-zinc-800 hover:border-orange-500/50 hover:bg-zinc-800 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2"
             >
               <Zap className="w-5 h-5 text-yellow-400" /> Free AI Tools
             </button>
           </div>
 
           {/* Dynamic Metric */}
-          <div className="mt-20 grid grid-cols-3 gap-8 border-t border-slate-800 pt-8 opacity-70">
+          <div className="mt-20 grid grid-cols-3 gap-8 border-t border-zinc-800 pt-8 opacity-70">
             <div>
               <div className="text-3xl font-display font-bold text-white">98%</div>
-              <div className="text-sm text-slate-500 uppercase tracking-wider font-semibold">Optimization</div>
+              <div className="text-sm text-zinc-500 uppercase tracking-wider font-semibold">Optimization</div>
             </div>
             <div>
               <div className="text-3xl font-display font-bold text-white">24/7</div>
-              <div className="text-sm text-slate-500 uppercase tracking-wider font-semibold">Uptime</div>
+              <div className="text-sm text-zinc-500 uppercase tracking-wider font-semibold">Uptime</div>
             </div>
             <div>
               <div className="text-3xl font-display font-bold text-white">10x</div>
-              <div className="text-sm text-slate-500 uppercase tracking-wider font-semibold">ROI</div>
+              <div className="text-sm text-zinc-500 uppercase tracking-wider font-semibold">ROI</div>
             </div>
           </div>
         </div>
@@ -169,11 +166,11 @@ const Hero: React.FC<Props> = ({ user, setView, isIdle, onUpdateIndustry }) => {
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer group opacity-0 animate-[fadeIn_1s_ease-out_1.5s_forwards]"
           title="Scroll Down"
         >
-          <span className="text-[10px] font-bold text-slate-600 uppercase tracking-[0.3em] group-hover:text-orange-500 transition-colors">
+          <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.3em] group-hover:text-orange-500 transition-colors">
             Explore
           </span>
-          <div className="w-[26px] h-[42px] border-2 border-slate-700 rounded-full p-1 flex justify-center group-hover:border-orange-500 transition-colors bg-black/50 backdrop-blur-sm">
-            <div className="w-1 h-2 bg-slate-500 rounded-full animate-[bounce_2s_infinite] group-hover:bg-orange-500" />
+          <div className="w-[26px] h-[42px] border-2 border-zinc-700 rounded-full p-1 flex justify-center group-hover:border-orange-500 transition-colors bg-black/50 backdrop-blur-sm">
+            <div className="w-1 h-2 bg-zinc-500 rounded-full animate-[bounce_2s_infinite] group-hover:bg-orange-500" />
           </div>
         </div>
       )}

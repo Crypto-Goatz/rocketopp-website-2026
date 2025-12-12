@@ -23,7 +23,7 @@ const TrendDashboard: React.FC<{ user: UserContext }> = ({ user }) => {
               <TrendingUp className="text-orange-500" /> 
               Live Market Data
             </h3>
-            <p className="text-slate-400 text-sm">
+            <p className="text-zinc-400 text-sm">
               Google Search Grounding via Gemini 2.5 Flash
             </p>
           </div>
@@ -34,13 +34,13 @@ const TrendDashboard: React.FC<{ user: UserContext }> = ({ user }) => {
           type="text" 
           value={targetIndustry}
           onChange={(e) => setTargetIndustry(e.target.value)}
-          className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+          className="flex-1 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
           placeholder="Enter Industry Topic..."
         />
         <button 
           onClick={handleSearch}
           disabled={loading}
-          className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 disabled:opacity-50 transition-colors border border-slate-700"
+          className="bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 disabled:opacity-50 transition-colors border border-zinc-700"
         >
           {loading ? <Loader2 className="animate-spin" /> : <Search className="w-5 h-5" />}
           Scan
@@ -49,12 +49,12 @@ const TrendDashboard: React.FC<{ user: UserContext }> = ({ user }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-y-auto custom-scrollbar pr-2 max-h-[500px]">
         {trends.map((trend, i) => (
-          <div key={i} className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-orange-500/30 transition-colors flex flex-col group">
-            <div className="bg-slate-800 w-10 h-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-900/20 transition-colors">
+          <div key={i} className="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-orange-500/30 transition-colors flex flex-col group">
+            <div className="bg-zinc-800 w-10 h-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-900/20 transition-colors">
                <Newspaper className="text-orange-500 w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold mb-2 line-clamp-2 text-white">{trend.title}</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3 flex-1">{trend.summary}</p>
+            <p className="text-sm text-zinc-400 mb-4 line-clamp-3 flex-1">{trend.summary}</p>
             {trend.sourceUrl && (
               <a href={trend.sourceUrl} target="_blank" rel="noreferrer" className="text-xs text-orange-400 hover:text-orange-300 uppercase font-bold tracking-wider mt-auto flex items-center gap-1">
                 Read Source <span className="text-lg leading-none">&rarr;</span>
@@ -63,7 +63,7 @@ const TrendDashboard: React.FC<{ user: UserContext }> = ({ user }) => {
           </div>
         ))}
         {!loading && trends.length === 0 && (
-           <div className="col-span-full flex flex-col items-center justify-center text-slate-600 py-12 border-2 border-dashed border-slate-800 rounded-2xl">
+           <div className="col-span-full flex flex-col items-center justify-center text-zinc-600 py-12 border-2 border-dashed border-zinc-800 rounded-2xl">
              <Search className="w-12 h-12 mb-4 opacity-20" />
              <p>Enter a topic to scan real-time web trends.</p>
            </div>

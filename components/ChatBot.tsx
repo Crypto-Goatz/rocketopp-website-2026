@@ -95,7 +95,7 @@ const ChatBot: React.FC<Props> = ({ user, setView, isOpen, setIsOpen, currentVie
           <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-4 border-black"></div>
           
           {/* Tooltip hint */}
-          <div className="absolute right-full mr-4 bg-slate-800 text-white px-3 py-1 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          <div className="absolute right-full mr-4 bg-zinc-800 text-white px-3 py-1 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Chat with Sales AI
           </div>
         </button>
@@ -103,9 +103,9 @@ const ChatBot: React.FC<Props> = ({ user, setView, isOpen, setIsOpen, currentVie
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-[90vw] md:w-[400px] h-[600px] bg-slate-950 border border-slate-800 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden animate-[fadeIn_0.3s_ease-out]">
+        <div className="fixed bottom-6 right-6 w-[90vw] md:w-[400px] h-[600px] bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden animate-[fadeIn_0.3s_ease-out]">
           {/* Header */}
-          <div className="bg-slate-900 p-4 flex justify-between items-center border-b border-slate-800">
+          <div className="bg-zinc-900 p-4 flex justify-between items-center border-b border-zinc-800">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center relative shadow-[0_0_15px_rgba(255,255,255,0.5)]">
                 <Bot className="text-black w-6 h-6" />
@@ -118,7 +118,7 @@ const ChatBot: React.FC<Props> = ({ user, setView, isOpen, setIsOpen, currentVie
                 </p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white">
+            <button onClick={() => setIsOpen(false)} className="text-zinc-400 hover:text-white">
               <X className="w-6 h-6" />
             </button>
           </div>
@@ -131,7 +131,7 @@ const ChatBot: React.FC<Props> = ({ user, setView, isOpen, setIsOpen, currentVie
                   className={`max-w-[85%] p-3.5 rounded-2xl text-sm leading-relaxed shadow-sm ${
                     msg.role === 'user' 
                       ? 'bg-orange-600 text-white rounded-br-none' 
-                      : 'bg-slate-900 text-slate-200 rounded-bl-none border border-slate-800'
+                      : 'bg-zinc-900 text-zinc-200 rounded-bl-none border border-zinc-800'
                   }`}
                 >
                   {msg.content}
@@ -140,10 +140,10 @@ const ChatBot: React.FC<Props> = ({ user, setView, isOpen, setIsOpen, currentVie
             ))}
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-slate-900 p-4 rounded-2xl rounded-bl-none flex gap-1.5 items-center">
-                  <span className="w-2 h-2 bg-slate-500 rounded-full animate-bounce"></span>
-                  <span className="w-2 h-2 bg-slate-500 rounded-full animate-bounce delay-75"></span>
-                  <span className="w-2 h-2 bg-slate-500 rounded-full animate-bounce delay-150"></span>
+                <div className="bg-zinc-900 p-4 rounded-2xl rounded-bl-none flex gap-1.5 items-center">
+                  <span className="w-2 h-2 bg-zinc-500 rounded-full animate-bounce"></span>
+                  <span className="w-2 h-2 bg-zinc-500 rounded-full animate-bounce delay-75"></span>
+                  <span className="w-2 h-2 bg-zinc-500 rounded-full animate-bounce delay-150"></span>
                 </div>
               </div>
             )}
@@ -151,18 +151,18 @@ const ChatBot: React.FC<Props> = ({ user, setView, isOpen, setIsOpen, currentVie
           </div>
 
           {/* Input */}
-          <div className="p-4 bg-slate-900 border-t border-slate-800 flex gap-2">
+          <div className="p-4 bg-zinc-900 border-t border-zinc-800 flex gap-2">
             <input 
               type="text" 
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               placeholder="Ask about AI, pricing, or strategy..."
-              className="flex-1 bg-black border border-slate-800 rounded-xl px-4 text-white focus:outline-none focus:border-orange-500 transition-colors"
+              className="flex-1 bg-black border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:border-orange-500 transition-colors"
             />
             <button 
               onClick={handleSend}
-              className="bg-white hover:bg-slate-200 text-black p-3 rounded-xl transition-colors shadow-lg"
+              className="bg-white hover:bg-zinc-200 text-black p-3 rounded-xl transition-colors shadow-lg"
             >
               <Send className="w-5 h-5" />
             </button>

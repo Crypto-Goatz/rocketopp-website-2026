@@ -29,7 +29,7 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
           <CheckCircle className="w-10 h-10 text-green-500" />
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Strategy Generated</h3>
-        <p className="text-slate-400 mb-6 max-w-md">
+        <p className="text-zinc-400 mb-6 max-w-md">
           A comprehensive 3-step digital transformation plan has been securely transmitted to <span className="text-white font-bold">{user.email}</span>.
         </p>
         <button 
@@ -49,25 +49,25 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
           <BrainCircuit className="text-orange-500" /> 
           Deep Strategy Core
         </h3>
-        <p className="text-slate-400 text-sm">
+        <p className="text-zinc-400 text-sm">
           Gemini 3 Pro Thinking Mode (32k Token Budget).
         </p>
       </div>
 
       <div className="flex-1 flex flex-col gap-6">
-        <label className="text-sm font-medium text-slate-300">
+        <label className="text-sm font-medium text-zinc-300">
           Describe your current business bottleneck:
         </label>
         <textarea 
           value={challenge}
           onChange={(e) => setChallenge(e.target.value)}
-          className="flex-1 bg-black border border-slate-800 rounded-xl p-4 text-white focus:border-orange-500 focus:outline-none resize-none placeholder:text-slate-700 font-mono text-sm"
+          className="flex-1 bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-orange-500 focus:outline-none resize-none placeholder:text-zinc-700 font-mono text-sm"
           placeholder={`e.g., We are struggling to convert leads in the ${user.industry || 'market'} sector...`}
         />
         
-        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start gap-3">
-          <Lock className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
-          <p className="text-xs text-slate-400 leading-relaxed">
+        <div className="bg-zinc-900 border border-zinc-800 p-4 rounded-xl flex items-start gap-3">
+          <Lock className="w-5 h-5 text-zinc-400 shrink-0 mt-0.5" />
+          <p className="text-xs text-zinc-400 leading-relaxed">
             <strong>Security Notice:</strong> Due to the high value of this strategic output, 
             the full report will be delivered exclusively to your registered email address.
           </p>
@@ -76,7 +76,7 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
         <button 
           onClick={handleStrategize}
           disabled={isThinking || !challenge}
-          className="w-full bg-slate-100 hover:bg-white text-black py-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-zinc-100 hover:bg-white text-black py-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isThinking ? (
             <>
