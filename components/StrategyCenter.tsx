@@ -25,7 +25,7 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
   if (isSent) {
     return (
       <div className="h-full flex flex-col items-center justify-center p-8 text-center animate-[fadeIn_0.5s_ease-out]">
-        <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
+        <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-6 border border-green-500/30">
           <CheckCircle className="w-10 h-10 text-green-500" />
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Strategy Generated</h3>
@@ -34,7 +34,7 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
         </p>
         <button 
           onClick={() => { setIsSent(false); setChallenge(''); }}
-          className="text-orange-500 hover:text-orange-400 text-sm font-bold uppercase tracking-wider"
+          className="text-orange-500 hover:text-orange-400 text-sm font-bold uppercase tracking-wider border-b border-orange-500/50 hover:border-orange-500 pb-1 transition-colors"
         >
           Create Another Strategy
         </button>
@@ -46,7 +46,7 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
     <div className="h-full flex flex-col">
       <div className="mb-6">
         <h3 className="text-xl font-bold text-white flex items-center gap-2">
-          <BrainCircuit className="text-indigo-400" /> 
+          <BrainCircuit className="text-orange-500" /> 
           Deep Strategy Core
         </h3>
         <p className="text-slate-400 text-sm">
@@ -54,20 +54,20 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col gap-4">
+      <div className="flex-1 flex flex-col gap-6">
         <label className="text-sm font-medium text-slate-300">
           Describe your current business bottleneck:
         </label>
         <textarea 
           value={challenge}
           onChange={(e) => setChallenge(e.target.value)}
-          className="flex-1 bg-slate-900/50 border border-slate-700 rounded-xl p-4 text-white focus:border-indigo-500 focus:outline-none resize-none placeholder:text-slate-600"
+          className="flex-1 bg-black border border-slate-800 rounded-xl p-4 text-white focus:border-orange-500 focus:outline-none resize-none placeholder:text-slate-700 font-mono text-sm"
           placeholder={`e.g., We are struggling to convert leads in the ${user.industry || 'market'} sector...`}
         />
         
-        <div className="bg-indigo-900/20 border border-indigo-500/30 p-4 rounded-xl flex items-start gap-3">
-          <Lock className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
-          <p className="text-xs text-indigo-200">
+        <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl flex items-start gap-3">
+          <Lock className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+          <p className="text-xs text-slate-400 leading-relaxed">
             <strong>Security Notice:</strong> Due to the high value of this strategic output, 
             the full report will be delivered exclusively to your registered email address.
           </p>
@@ -76,7 +76,7 @@ const StrategyCenter: React.FC<{ user: UserContext }> = ({ user }) => {
         <button 
           onClick={handleStrategize}
           disabled={isThinking || !challenge}
-          className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-800 text-white py-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 shadow-lg shadow-indigo-900/50"
+          className="w-full bg-slate-100 hover:bg-white text-black py-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isThinking ? (
             <>

@@ -12,7 +12,12 @@ export interface UserContext {
 export enum PageView {
   HOME = 'HOME',
   SERVICES = 'SERVICES',
-  TOOLS = 'TOOLS', // Consolidated Tools Page
+  // New Service Pillars
+  MARKETING = 'MARKETING',
+  AI_APPS = 'AI_APPS',
+  WEB_DEV = 'WEB_DEV',
+  
+  TOOLS = 'TOOLS',
   CONTACT = 'CONTACT'
 }
 
